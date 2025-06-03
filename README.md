@@ -1,5 +1,7 @@
 # GitHub Issue Searcher MCP 🚀
 
+https://github.com/user-attachments/assets/a983cf5f-8888-4592-b3c8-0bd152e95722
+
 A powerful **Model Context Protocol (MCP) Server** that combines **FAISS** (Facebook AI Similarity Search) with **OpenAI embeddings** to provide semantic search capabilities for GitHub repository issues. Perfect for building RAG (Retrieval-Augmented Generation) systems and knowledge bases focused on GitHub issue tracking!
 
 ## ✨ Features
