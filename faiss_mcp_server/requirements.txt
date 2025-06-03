@@ -1,0 +1,8 @@
+mcp[cli]>=0.1.0
+faiss-cpu>=1.7.4
+numpy>=1.23.0
+python-dotenv>=1.0.0
+uuid>=1.30
+openai>=1.0.0
+PyGithub>=1.59
+tiktoken>=0.5.0 

@@ -1,0 +1,40 @@
+[project]
+name = "github-issue-searcher-mcp"
+version = "1.0.0"
+description = "MCP Server for semantic search of GitHub repository issues using FAISS and OpenAI embeddings"
+authors = [{ name = "Calum Simpson", email = "calum@example.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+keywords = ["github", "issues", "mcp", "semantic-search", "faiss", "embeddings", "openai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "mcp[cli]>=0.1.0", # Adjust version as needed
+    "faiss-cpu>=1.7.4", # Or faiss-gpu if you have CUDA setup
+    "numpy>=1.23.0",
+    "python-dotenv>=1.0.0", # For loading .env file
+    "uuid>=1.30", # For generating unique IDs
+    "openai>=1.0.0", # Add openai library
+    "PyGithub>=1.59", # Add PyGithub
+    "tiktoken>=0.5.0", # For accurate token counting
+]
+requires-python = ">=3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.uv]
+dev-dependencies = [] 
