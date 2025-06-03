@@ -10,7 +10,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.StreamHandler(sys.stdout),
+        logging.StreamHandler(sys.stderr),  # Use stderr instead of stdout for MCP compatibility
         logging.FileHandler('faiss_mcp_server.log', mode='a')
     ]
 )
@@ -99,8 +99,8 @@ if __name__ == "__main__":
             github_pat=github_pat,
             clear_first=args.clear
         )
-        # Print status to console
-        print(f"GitHub Sync Status: {sync_status}", file=sys.stderr)
+        # Log status instead of printing to avoid MCP protocol interference
+        logger.info(f"GitHub Sync Status: {sync_status}")
         # Optionally exit if sync failed?
         # if "Error:" in sync_status:
         #     sys.exit(1)
